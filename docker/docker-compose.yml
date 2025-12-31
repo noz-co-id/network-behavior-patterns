@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  behavior-generator:
+    build: ./generator
+    container_name: behavior-pattern-generator
+    volumes:
+      - ./output:/output
+    environment:
+      - MODE=synthetic
+      - OUTPUT=/output/aggregated-behavior.log.json
